@@ -126,6 +126,7 @@ namespace WindowsFormsApp1
                 }
                 catch(Exception)
                 {
+
                 }                
             }));
         }
@@ -190,6 +191,11 @@ namespace WindowsFormsApp1
                 GetMapImage(Lsrc[i]);
                 tboxGo.Text = i.ToString();
             }));
+        }
+
+        private void tboxPW_TextChanged(object sender, EventArgs e)
+        {
+            tboxPW.PasswordChar = '*';
         }
     }
 }

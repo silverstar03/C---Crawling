@@ -42,12 +42,12 @@ namespace WindowsFormsApp1
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.pboxMain = new System.Windows.Forms.PictureBox();
-            this.btnPre = new System.Windows.Forms.Button();
-            this.tboxGo = new System.Windows.Forms.TextBox();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.btnGO = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
+            this.btnGO = new System.Windows.Forms.Button();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.tboxGo = new System.Windows.Forms.TextBox();
+            this.btnPre = new System.Windows.Forms.Button();
+            this.pboxMain = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -140,6 +140,7 @@ namespace WindowsFormsApp1
             this.tboxPW.Name = "tboxPW";
             this.tboxPW.Size = new System.Drawing.Size(94, 21);
             this.tboxPW.TabIndex = 4;
+            this.tboxPW.TextChanged += new System.EventHandler(this.tboxPW_TextChanged);
             // 
             // groupBox1
             // 
@@ -186,33 +187,23 @@ namespace WindowsFormsApp1
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "2.2. 이미지 검색 상세";
             // 
-            // pboxMain
+            // btnNext
             // 
-            this.pboxMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pboxMain.Location = new System.Drawing.Point(6, 23);
-            this.pboxMain.Name = "pboxMain";
-            this.pboxMain.Size = new System.Drawing.Size(388, 350);
-            this.pboxMain.TabIndex = 0;
-            this.pboxMain.TabStop = false;
+            this.btnNext.Location = new System.Drawing.Point(291, 384);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(71, 27);
+            this.btnNext.TabIndex = 5;
+            this.btnNext.Text = "▶";
+            this.btnNext.UseVisualStyleBackColor = true;
             // 
-            // btnPre
+            // btnGO
             // 
-            this.btnPre.Location = new System.Drawing.Point(49, 384);
-            this.btnPre.Name = "btnPre";
-            this.btnPre.Size = new System.Drawing.Size(74, 27);
-            this.btnPre.TabIndex = 1;
-            this.btnPre.Text = "◀";
-            this.btnPre.UseVisualStyleBackColor = true;
-            this.btnPre.Click += new System.EventHandler(this.btnPre_Click);
-            // 
-            // tboxGo
-            // 
-            this.tboxGo.Location = new System.Drawing.Point(137, 386);
-            this.tboxGo.Name = "tboxGo";
-            this.tboxGo.Size = new System.Drawing.Size(34, 21);
-            this.tboxGo.TabIndex = 2;
-            this.tboxGo.Text = "0";
-            this.tboxGo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnGO.Location = new System.Drawing.Point(216, 384);
+            this.btnGO.Name = "btnGO";
+            this.btnGO.Size = new System.Drawing.Size(69, 27);
+            this.btnGO.TabIndex = 4;
+            this.btnGO.Text = "GO";
+            this.btnGO.UseVisualStyleBackColor = true;
             // 
             // lblTotal
             // 
@@ -224,25 +215,33 @@ namespace WindowsFormsApp1
             this.lblTotal.TabIndex = 3;
             this.lblTotal.Text = "/ 0";
             // 
-            // btnGO
+            // tboxGo
             // 
-            this.btnGO.Location = new System.Drawing.Point(216, 384);
-            this.btnGO.Name = "btnGO";
-            this.btnGO.Size = new System.Drawing.Size(69, 27);
-            this.btnGO.TabIndex = 4;
-            this.btnGO.Text = "GO";
-            this.btnGO.UseVisualStyleBackColor = true;
-            this.btnGO.Click += new System.EventHandler(this.btnGO_Click);
+            this.tboxGo.Location = new System.Drawing.Point(137, 386);
+            this.tboxGo.Name = "tboxGo";
+            this.tboxGo.Size = new System.Drawing.Size(34, 21);
+            this.tboxGo.TabIndex = 2;
+            this.tboxGo.Text = "0";
+            this.tboxGo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // btnNext
+            // btnPre
             // 
-            this.btnNext.Location = new System.Drawing.Point(291, 384);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(71, 27);
-            this.btnNext.TabIndex = 5;
-            this.btnNext.Text = "▶";
-            this.btnNext.UseVisualStyleBackColor = true;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            this.btnPre.Location = new System.Drawing.Point(49, 384);
+            this.btnPre.Name = "btnPre";
+            this.btnPre.Size = new System.Drawing.Size(74, 27);
+            this.btnPre.TabIndex = 1;
+            this.btnPre.Text = "◀";
+            this.btnPre.UseVisualStyleBackColor = true;
+            this.btnPre.Click += new System.EventHandler(this.btnPre_Click);
+            // 
+            // pboxMain
+            // 
+            this.pboxMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pboxMain.Location = new System.Drawing.Point(6, 23);
+            this.pboxMain.Name = "pboxMain";
+            this.pboxMain.Size = new System.Drawing.Size(388, 350);
+            this.pboxMain.TabIndex = 0;
+            this.pboxMain.TabStop = false;
             // 
             // Form1
             // 
